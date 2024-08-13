@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +15,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .container {
@@ -39,32 +47,44 @@ body {
 
 .login-container h1 {
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .login-container p {
     margin: 5px 0;
+    /* background-color: aqua; */
+    width: 41%;
 }
 
 .login-container input {
     width: 40%;
+    height: 9vh;
     padding: 10px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.568);
+    outline: none;
 }
-
+.login-container input:focus {
+    border: solid 1px #a0889d;
+}
 .login-container button {
-    width: 25%;
+    width: 42%;
     padding: 10px;
-    background-color: #444;
-    color: #fff;
+    background-color: #a0889d;
+    color: #131313;
+    font-weight: 500;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 3px 3px 5px rgba(128, 128, 128, 0.568);
+
 }
 
 .login-container button:hover {
-    background-color: #555;
+    background-color: #8b7188;
 }
 
 .forgot-password {

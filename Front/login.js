@@ -12,6 +12,12 @@ const usuarios = [
         "email": "gustavo.gomes@sptech.school",
         "senha": "gu123456",
         "TIPO": "Desenvolvimento"
+    },
+    {
+        "nome": "Nelson Campelo",
+        "email": "CF01000",
+        "senha": "senha123",
+        "TIPO": "CEO"
     }
 ]
 
@@ -34,7 +40,7 @@ function entrar() {
     if (usuarioValido) {
         if (usuarioValido.TIPO === "Marketing") {
             alert("Bem-vindo, " + usuarioValido.nome + "!");
-            window.location.href = "./chatIa.html"
+            window.location.href = "./chat/index.html"
         } else {
             alert("Acesso negado. Apenas usuários do departamento de Marketing podem acessar.");
         }
