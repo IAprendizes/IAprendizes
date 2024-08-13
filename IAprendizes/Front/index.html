@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackaton-SPTech</title>
+</head>
+<body>
+
+    <p>Digite o texto para IA:</p>
+    <input id="input_texto_ia" placeholder="IA">
+    <button onclick="enviarTexto()">Enviar</button>
+    <p>Resposta da IA:</p>
+    <textarea id="ia_response" rows="10" cols="50" readonly></textarea>
+
+</body>
+</html>
+
+<script>
+    async function enviarTexto() {
+        const inputTexto = document.getElementById('input_texto_ia').value;
+        
+        const response = await fetch('/generate', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ mensagem: inputTexto }),
+        });
+        
+        const data = await response.json();
+        document.getElementById('ia_response').value = data.resposta;
+    }
+</script>
