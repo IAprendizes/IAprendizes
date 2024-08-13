@@ -1,5 +1,0 @@
-streamlit
-streamlit-analytics
-boto3
-virtualenv
-jupyterlab
